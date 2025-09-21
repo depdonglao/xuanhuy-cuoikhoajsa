@@ -16,13 +16,26 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="/Dự án demo/Shopping cart.html">Giỏ hàng</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Chuyển đến
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#scrollspyHeading1">Shop Assistant</a></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading3">Membership</a></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading2">Footer</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                 <form class="d-flex" role="search" style="margin-left: auto;">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <form class="d-flex" style="margin-left: 10px;">
-                    <a href="login.html"><button class="btn btn-outline-success">login</button></a>
-                </form>
+                <a href="login.html"><button class="btn btn-outline-success" style="margin-left: 10px;">login</button></a>
             </div>
         </div>
     </nav>
@@ -34,36 +47,179 @@
         <h6 class="title1">Ở đây chung tôi sẽ cung cấp cho các bạn các vật phẩm liên quan đến thể thao tốt nhất cùng các dịch vụ chăm sóc khách hàng tận tâm nhất.</h6>
     </div>
 
-
     <!-- Sản phẩm -->
     <h1>Sports Accessories</h1>
     <div id="products" class="product-grid"></div>
 
+    <!-- <script>
+        // Mảng sản phẩm mẫu
+        const products = [
+            { id: 1, name: "Bóng đá", price: 500000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bóng đá.png" },
+            { id: 2, name: "Giày đá bóng", price: 1200000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày đá bóng.png" },
+            { id: 3, name: "Găng tay thủ môn", price: 300000, image: "/QN-JSA/Dự án demo 2/Ảnh/Găng tay thủ môn.png" },
+            { id: 4, name: "Bóng rổ", price: 600000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bóng rổ.png" },
+            { id: 5, name: "Giày bóng rổ", price: 1500000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày bóng rổ.png" },
+            { id: 6, name: "Vợt cầu lông", price: 800000, image: "/QN-JSA/Dự án demo 2/Ảnh/Vợt cầu lông.png" },
+            { id: 7, name: "Giày cầu lông", price: 1100000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày cầu lông.png" },
+            { id: 8, name: "Quần áo thể thao", price: 400000, image: "/QN-JSA/Dự án demo 2/Ảnh/Quần áo thể thao.png" },
+            { id: 9, name: "Bình nước thể thao", price: 200000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bình nước thể thao.png" },
+            { id: 10, name: "Túi thể thao", price: 700000, image: "/QN-JSA/Dự án demo 2/Ảnh/Túi thể thao.png" }
+        ];
+
+        // Hàm hiển thị sản phẩm
+        function displayProducts() {
+            const productContainer = document.getElementById('products');
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">Price: ${product.price.toLocaleString()} VND</p>
+                        <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+                    </div>
+                `;
+                productContainer.appendChild(productCard);
+            });
+        }
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                alert(`${product.name} has been added to your cart!`);
+                // Ở đây bạn có thể thêm logic để lưu sản phẩm vào giỏ hàng (localStorage, session, v.v.)
+            } else {
+                alert("Product not found!");
+            }
+        }
+        // Gọi hàm hiển thị sản phẩm khi trang tải xong
+        window.onload = displayProducts;
+    </script> -->
 
 
+
+    <!-- Shop Assistant -->
+    <label id="scrollspyHeading1"></label>
+    <body>
+      <h2>Danh sách Shop Assistant nổi bật</h2>
+      <div class="container">
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 1">
+          <h3>Bruney Durian</h3>
+          <p>Vị trí: Tư vấn bán hàng</p>
+          <p>Kinh nghiệm: 2 năm</p>
+        </div>
+
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 2">
+          <h3>Dũng GG</h3>
+          <p>Vị trí: Hỗ trợ khách hàng</p>
+          <p>Kinh nghiệm: 1.5 năm</p>
+        </div>
+
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 3">
+          <h3>Nguyễn Anh Đút</h3>
+          <p>Vị trí: Chăm sóc khách hàng</p>
+          <p>Kinh nghiệm: 3 năm</p>
+        </div>
+
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 4">
+          <h3>Chiết Chin Chon</h3>
+          <p>Vị trí: Tư vấn mỹ phẩm</p>
+          <p>Kinh nghiệm: 4 năm</p>
+        </div>
+      </div>
+    </body>
+    
+    <!-- Membership -->
+    <section class="membership-section" id="scrollspyHeading3">
+      <h2>Membership ShopDDL</h2>
+      <p class="membership-subtitle">Hãy đăng ký hội viên để nhận ưu đãi và phiếu giảm giá giới hạn!</p>
+
+      <div class="membership-card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 1 tháng.jpg" alt="Vip 1 tháng">
+          <div class="card-body">
+            <h5>Thành viên 1 tháng</h5>
+            <p class="price">115.000đ</p>
+            <ul>
+              <li>🎯 Giảm 5% cho tất cả đơn hàng.</li>
+              <li>🚚 Miễn phí vận chuyển cho đơn từ 499.000đ.</li>
+              <li>🎁 Tặng mã giảm 30.000đ cho đơn đầu tiên.</li>
+              <li>📩 Ưu tiên nhận thông báo ưu đãi.</li>
+            </ul>
+          </div>
+          <button class="register-btn" onclick="alert('Đã gửi yêu cầu, hãy chờ email của chúng tôi!')">Đăng ký ngay</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 6 tháng.png" alt="Vip 6 tháng">
+          <div class="card-body">
+            <h5>Thành viên 6 tháng</h5>
+            <p class="price">699.000đ</p>
+            <ul>
+              <li>🎯 Giảm 10% cho tất cả đơn hàng.</li>
+              <li>🚚 Miễn phí vận chuyển từ 299.000đ.</li>
+              <li>🎁 Mã giảm 100.000đ cho đơn từ 799.000đ.</li>
+              <li>🎽 Sale sớm hơn 1 ngày.</li>
+              <li>🛍 Voucher sinh nhật 50.000đ.</li>
+              <li>📦 Tích điểm đổi quà đơn từ 300.000đ.</li>
+            </ul>
+          </div>
+          <button class="register-btn" onclick="alert('Đã gửi yêu cầu, hãy chờ email của chúng tôi!')">Đăng ký ngay</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 1 năm.png" alt="Vip 1 năm">
+          <div class="card-body">
+            <h5>Thành viên 1 năm</h5>
+            <p class="price">1.399.000đ</p>
+            <ul>
+              <li>🎯 Giảm 15% cho tất cả đơn hàng.</li>
+              <li>🚚 Miễn phí vận chuyển không giới hạn.</li>
+              <li>🎁 Mã giảm 150.000đ khi đăng ký và mỗi 6 tháng.</li>
+              <li>🛍 Ưu tiên đặt hàng giới hạn.</li>
+              <li>🎂 Quà sinh nhật trị giá 100.000đ.</li>
+              <li>📞 Hỗ trợ riêng cho VIP.</li>
+              <li>🏋️‍♀️ Ưu đãi với đối tác gym.</li>
+              <li>💎 1 lần giảm 30% mỗi năm (đơn < 2 triệu).</li>
+            </ul>
+          </div>
+          <button class="register-btn" onclick="alert('Đã gửi yêu cầu, hãy chờ email của chúng tôi!')">Đăng ký ngay</button>
+        </div>
+      </div>
+    </section>
 
 
     <!-- Chuyển lên đầu trang -->
     <div class="back-to-navbar">
-        <a href="#navbar"><img src="/QN-JSA/Dự án demo 2/Ảnh/Mũi tên lên đầu trang.png" alt="#" style="height: 30px; width: 30px;"></a>
+        <a href="#navbar"><img src="/QN-JSA/Dự án demo 2/Ảnh/Mũi tên lên đầu trang.png" alt="#" style="height: 30px; width: 30px; position: fixed; bottom: 15px; right: 15px;"></a>
     </div>
 
     <!-- footer -->
-    <footer class="bg-dark text-light py-4" style="margin: top 20px; ;">
+    <footer class="bg-dark text-light py-4" style="margin: top 20px;" id="scrollspyHeading2">
       <div class="container">
         <div class="row">
           <!-- About Section -->
           <div class="col-md-4 mb-3">
             <h5>Về Chúng tôi:</h5>
-            <p>Chúng tôi cam kết cung cấp những dịch vụ và ưu đãi tốt nhất.</p>
+            <p>Tôi là Vũ Xuân Huy</p>
+            <p>Học sinh khóa học JSA-2024</p>
+            <p>Tôi cam kết cung cấp những dịch vụ và ưu đãi tốt nhất.</p>
           </div>
 
           <!-- Navigation Links -->
           <div class="col-md-4 mb-3">
             <h5>Liên kết nhanh</h5>
-            <ul class="list-unstyled">
-              <li><a href="" class="text-light text-decoration-none">Giỏ hàng</a></li>
-            </ul>
+            <!-- <ul class="list-unstyled">
+              <li><a href=" " class="text-light text-decoration-none">Giỏ hàng</a></li>
+            </ul> -->
           </div>
 
           <!-- Contact Info -->
@@ -80,9 +236,9 @@
         </div>
 
         <hr class="border-light" />
-          <div class="text-center">
-              <small>&copy; 2025 DDLshop. All rights reserved.</small>
-          </div>
+        <div class="text-center">
+          <small>&copy; 2025 DDLshop. All rights reserved.</small>
+        </div>
       </div>
     </footer>
 
@@ -90,7 +246,7 @@
 
 
 
-    <script src="/QN-JSA/Dự án demo 2/Java/home.js"></script>
+    <script src="/QN-JSA/Dự án demo 2/Javascript/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
