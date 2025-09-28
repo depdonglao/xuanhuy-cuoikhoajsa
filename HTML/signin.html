@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>signin</title>
+    <link rel="stylesheet" href="/QN-JSA/Dự án demo 2/CSS/signin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" id="navbar">
+            <a class="navbar-brand" href="home.html"><img src="/QN-JSA/Dự án demo 2/Ảnh/Logo1.png" alt="Logo" style="height: 40px; width: 40px;margin: none; padding: none;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" role="search" style="margin-left: auto;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <a href="login.html"><button class="btn btn-outline-success" style="margin-left: 10px;">login</button></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+      <h1 style="text-align: center;">Sign in</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="login">
+        <h5>Đã có tài khoản? Hãy đăng nhập ngay!</h5>
+        <a href="login.html"><button>Log in</button></a>
+    </div>
+
+    <!-- Chuyển lên đầu trang -->
+    <div class="back-to-navbar">
+        <a href="#navbar"><img src="/QN-JSA/Dự án demo 2/Ảnh/Mũi tên lên đầu trang.png" alt="#" style="height: 30px; width: 30px; position: fixed; bottom: 15px; right: 15px;"></a>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-light py-4" style="margin: top 20px">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4 mb-3">
+            <h5>Về Chúng tôi:</h5>
+            <p>Tôi là Vũ Xuân Huy</p>
+            <p>Học sinh khóa học JSA-2024</p>
+            <p>Tôi cam kết cung cấp những dịch vụ và ưu đãi tốt nhất.</p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="col-md-4 mb-3">
+            <h5>Liên kết nhanh</h5>
+            <!-- <ul class="list-unstyled">
+              <li><a href=" " class="text-light text-decoration-none">Giỏ hàng</a></li>
+            </ul> -->
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-4 mb-3">
+            <h5>Contact</h5>
+            <p>Email: xhuy1728@gmail.com</p>
+            <p>Phone: 0969134189</p>
+            <div class="d-flex gap-2">
+              <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+          <div class="text-center">
+              <small>&copy; 2025 DDLshop. All rights reserved.</small>
+          </div>
+      </div>
+    </footer>
+
+
+
+
+
+    <script src="/JSA_SS6/SS6/scripts/signin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
