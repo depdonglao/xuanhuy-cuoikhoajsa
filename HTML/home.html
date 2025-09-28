@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopDDL</title>
-    <link rel="stylesheet" href="/QN-JSA/Dự án demo 2/CSS/home.css">
+    <link rel="stylesheet" href="/QN-JSA/Project2/CSS/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" id="navbar">
-            <a class="navbar-brand" href="home.html"><img src="/QN-JSA/Dự án demo 2/Ảnh/Logo1.png" alt="Logo" style="height: 40px; width: 40px;margin: none; padding: none;"></a>
+            <a class="navbar-brand" href="home.html"><img src="/QN-JSA/Project2/Ảnh/Logo1.png" alt="Logo" style="height: 40px; width: 40px;margin: none; padding: none;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" href="/Dự án demo/Shopping cart.html">Giỏ hàng</a>
+                        <a class="nav-link active" href="">Giỏ hàng</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,82 +51,34 @@
     <h1>Sports Accessories</h1>
     <div id="products" class="product-grid"></div>
 
-    <!-- <script>
-        // Mảng sản phẩm mẫu
-        const products = [
-            { id: 1, name: "Bóng đá", price: 500000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bóng đá.png" },
-            { id: 2, name: "Giày đá bóng", price: 1200000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày đá bóng.png" },
-            { id: 3, name: "Găng tay thủ môn", price: 300000, image: "/QN-JSA/Dự án demo 2/Ảnh/Găng tay thủ môn.png" },
-            { id: 4, name: "Bóng rổ", price: 600000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bóng rổ.png" },
-            { id: 5, name: "Giày bóng rổ", price: 1500000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày bóng rổ.png" },
-            { id: 6, name: "Vợt cầu lông", price: 800000, image: "/QN-JSA/Dự án demo 2/Ảnh/Vợt cầu lông.png" },
-            { id: 7, name: "Giày cầu lông", price: 1100000, image: "/QN-JSA/Dự án demo 2/Ảnh/Giày cầu lông.png" },
-            { id: 8, name: "Quần áo thể thao", price: 400000, image: "/QN-JSA/Dự án demo 2/Ảnh/Quần áo thể thao.png" },
-            { id: 9, name: "Bình nước thể thao", price: 200000, image: "/QN-JSA/Dự án demo 2/Ảnh/Bình nước thể thao.png" },
-            { id: 10, name: "Túi thể thao", price: 700000, image: "/QN-JSA/Dự án demo 2/Ảnh/Túi thể thao.png" }
-        ];
-
-        // Hàm hiển thị sản phẩm
-        function displayProducts() {
-            const productContainer = document.getElementById('products');
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'card';
-                productCard.innerHTML = `
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text">Price: ${product.price.toLocaleString()} VND</p>
-                        <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
-                    </div>
-                `;
-                productContainer.appendChild(productCard);
-            });
-        }
-        // Hàm thêm sản phẩm vào giỏ hàng
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                alert(`${product.name} has been added to your cart!`);
-                // Ở đây bạn có thể thêm logic để lưu sản phẩm vào giỏ hàng (localStorage, session, v.v.)
-            } else {
-                alert("Product not found!");
-            }
-        }
-        // Gọi hàm hiển thị sản phẩm khi trang tải xong
-        window.onload = displayProducts;
-    </script> -->
-
-
-
     <!-- Shop Assistant -->
     <label id="scrollspyHeading1"></label>
     <body>
       <h2>Danh sách Shop Assistant nổi bật</h2>
       <div class="container">
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 1">
+          <img src="/QN-JSA/Project2/Ảnh/nhân viên.jpg" alt="Assistant 1">
           <h3>Bruney Durian</h3>
           <p>Vị trí: Tư vấn bán hàng</p>
           <p>Kinh nghiệm: 2 năm</p>
         </div>
 
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 2">
+          <img src="/QN-JSA/Project2/Ảnh/nhân viên.jpg" alt="Assistant 2">
           <h3>Dũng NG</h3>
           <p>Vị trí: Hỗ trợ khách hàng</p>
           <p>Kinh nghiệm: 1.5 năm</p>
         </div>
 
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 3">
+          <img src="/QN-JSA/Project2/Ảnh/nhân viên.jpg" alt="Assistant 3">
           <h3>Nguyễn Anh Đút</h3>
           <p>Vị trí: Chăm sóc khách hàng</p>
           <p>Kinh nghiệm: 3 năm</p>
         </div>
 
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/nhân viên.jpg" alt="Assistant 4">
+          <img src="/QN-JSA/Project2/Ảnh/nhân viên.jpg" alt="Assistant 4">
           <h3>Chiết Chin Chon</h3>
           <p>Vị trí: Tư vấn mỹ phẩm</p>
           <p>Kinh nghiệm: 4 năm</p>
@@ -142,7 +94,7 @@
       <div class="membership-card-container">
         <!-- Card 1 -->
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 1 tháng.jpg" alt="Vip 1 tháng">
+          <img src="/QN-JSA/Project2/Ảnh/Vip 1 tháng.jpg" alt="Vip 1 tháng">
           <div class="card-body">
             <h5>Thành viên 1 tháng</h5>
             <p class="price">115.000đ</p>
@@ -158,7 +110,7 @@
 
         <!-- Card 2 -->
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 6 tháng.png" alt="Vip 6 tháng">
+          <img src="/QN-JSA/Project2/Ảnh/Vip 6 tháng.png" alt="Vip 6 tháng">
           <div class="card-body">
             <h5>Thành viên 6 tháng</h5>
             <p class="price">699.000đ</p>
@@ -176,7 +128,7 @@
 
         <!-- Card 3 -->
         <div class="card">
-          <img src="/QN-JSA/Dự án demo 2/Ảnh/Vip 1 năm.png" alt="Vip 1 năm">
+          <img src="/QN-JSA/Project2/Ảnh/Vip 1 năm.png" alt="Vip 1 năm">
           <div class="card-body">
             <h5>Thành viên 1 năm</h5>
             <p class="price">1.399.000đ</p>
@@ -199,7 +151,7 @@
 
     <!-- Chuyển lên đầu trang -->
     <div class="back-to-navbar">
-        <a href="#navbar"><img src="/QN-JSA/Dự án demo 2/Ảnh/Mũi tên lên đầu trang.png" alt="#" style="height: 30px; width: 30px; position: fixed; bottom: 15px; right: 15px;"></a>
+        <a href="#navbar"><img src="/QN-JSA/Project2/Ảnh/Mũi tên lên đầu trang.png" alt="#" style="height: 30px; width: 30px; position: fixed; bottom: 15px; right: 15px;"></a>
     </div>
 
     <!-- footer -->
@@ -246,7 +198,7 @@
 
 
 
-    <script src="/QN-JSA/Dự án demo 2/Javascript/home.js"></script>
+    <script src="/QN-JSA/Project2/Javascript/home.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

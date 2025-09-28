@@ -11,6 +11,8 @@ fetch("https://dummyjson.com/products/category/sports-accessories")
         <h3>${p.title}</h3>
         <p>${p.description}</p>
         <div class="price">$${p.price}</div>
+        <div class="rating">Rating: ${p.rating} ⭐</div>
+        <button>Add to Cart</button>
       `;
       container.appendChild(card);
     });
