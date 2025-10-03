@@ -1,48 +1,49 @@
-if (localStorage.getItem("user")){
-    window.location.href = "/QN-JSA/Project2/home.html"
-}
-
+// Lắng nghe khi DOM đã load xong để chắc chắn các thẻ input tồn tại
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
 
+    // Lấy form đăng ký
+    const form = document.getElementById("signinForm");
+
+    // Bắt sự kiện submit form
     form.addEventListener("submit", (e) => {
-        e.preventDefault()
-        
-        const username = document.getElementById("username").value
-        const email = document.getElementById("email").value
-        const password = document.getElementById("password").value
+        e.preventDefault(); // Ngăn load lại trang
 
-        console.log(username, email, password)
+        // Lấy giá trị từ các ô nhập
+        const email = document.getElementById("signinEmail").value;
+        const password = document.getElementById("signinPassword").value;
+        const confirm = document.getElementById("signinConfirm").value;
 
-        if (!username || !email || !password){
-            alert("Vui lòng nhập đầy đủ thông tin!")
+        // 1. Kiểm tra mật khẩu phải >= 8 ký tự
+        if (password.length < 8) {
+            alert("Mật khẩu phải có ít nhất 8 ký tự");
+            return; // Dừng lại
+        }
+
+        // 2. Kiểm tra mật khẩu nhập lại có khớp không
+        if (password !== confirm) {
+            alert("Mật khẩu nhập lại không khớp");
             return;
         }
 
-        if (password.length < 6){
-            alert("Vui lòng nhập mật khẩu dài hơn 6 ký tự!")
+        // 3. Lấy danh sách user từ localStorage (nếu chưa có thì mảng rỗng)
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // 4. Kiểm tra trùng email
+        const isExist = users.some(u => u.email === email);
+        if (isExist) {
+            alert("Email đã tồn tại, vui lòng dùng email khác");
             return;
         }
 
-        const users = JSON.parse(localStorage.getItem("users") || "[]")
+        // 5. Thêm user mới vào danh sách
+        users.push({ email, password });
 
-        // Lọc trùng email
-        if (users.some(u => u.email === email)){
-            alert("Email bạn bạn nhập đã được liên kết với một tài khoản khác, vui lòng nhập email khác!")
-            return;
-        }
+        // 6. Lưu lại vào localStorage
+        localStorage.setItem("users", JSON.stringify(users));
 
-        const newUser = {
-            id: Date.now(),
-            username,
-            email,
-            password
-        }
+        // 7. Thông báo và chuyển về login
+        alert("Đăng ký thành công! Hãy đăng nhập.");
+        window.location.href = "login.html";
+    });
 
-        users.push(newUser)
-        localStorage.setItem("users", JSON.stringify(users))
-
-        alert("Đăng ký tài khoản thành công, vui nhấn OK để đăng nhập lại!")
-        window.location.href = "/QN-JSA/Project2/login.html"
-    })
-})
+});

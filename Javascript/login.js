@@ -1,29 +1,20 @@
-if (localStorage.getItem("user")){
-    window.location.href = "/QN-JSA/D%E1%BB%B1%20%C3%A1n%20demo%202/home.html"
-}
+document.getElementById("loginForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-    
-    document.addEventListener("submit", (e) => {
-        e.preventDefault()
+  let email = document.getElementById("loginEmail").value;
+  let password = document.getElementById("loginPassword").value;
 
-        const email = document.getElementById("email").value.trim()
-        const password = document.getElementById("password").value.trim()
-        console.log(email, password)
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-        console.log(users)
-        const found = users.find(u => u.email === email && u.password === password)
-        console.log("found:", found)
+  // Lấy danh sách user đã đăng ký
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
-        if (!found){
-            alert("Tài khoản hoặc mật khẩu không chính xác!")
-            return;
-        }
+  // Tìm user có email và password khớp
+  let validUser = users.find(user => user.email === email && user.password === password);
 
-        localStorage.setItem("user", JSON.stringify(found))
-
-        alert("Đăng nhập thành công!")
-        window.location.href = "/QN-JSA/D%E1%BB%B1%20%C3%A1n%20demo%202/home.html"
-    })
-})
+  if(validUser){
+    alert("Đăng nhập thành công!");
+    window.location.href = "home.html";
+  } else {
+    // Điều kiện 3: nếu nhập sai thì báo lỗi
+    alert("Sai email hoặc mật khẩu! Vui lòng nhập lại.");
+  }
+});

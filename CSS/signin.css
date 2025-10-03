@@ -1,13 +1,47 @@
-.h1{
-    text-align: center;
-}
-.row {
-    justify-content: center;
+/* Trang sign in */
+.signin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 400px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
-.container {
-    margin-top: 50px;
-    margin-bottom: 50px;
+.signin-page h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.signin-page input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signin-page .submitBtn {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signin-page .submitBtn:hover {
+  background: #333;
+}
+
+.signin-page .login {
+  margin-top: 15px;
+  text-align: center;
 }
 
 .login {
