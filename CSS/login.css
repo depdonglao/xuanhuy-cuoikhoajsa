@@ -1,4 +1,3 @@
-/* Trang login */
 .login-page {
   display: flex;
   flex-direction: column;
@@ -64,4 +63,19 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+
+  .title {
+    margin: 10px 5px;
+    padding: 10px;
+  }
+
+  .suggest-item-name, .suggest-item-price, .card h3, .card p {
+    font-size: 14px;
+  }
 }
